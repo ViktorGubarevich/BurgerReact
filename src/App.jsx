@@ -1,17 +1,17 @@
-import { Container } from "./components/Container/Container";
-import { Header } from "./components/Header/Header";
+import { Catalog } from "./components/Catalog";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Navigation } from "./components/Navigation";
 
 export const App = () => {
   return (
     <>
       <Header />
       <main>
-        <nav>
-          <Container className="navigation__container" />
-        </nav>
-        <section></section>
+        <Navigation />
+        <Catalog />
       </main>
-      <footer></footer>
+      <Footer />
     </>
   );
 };
