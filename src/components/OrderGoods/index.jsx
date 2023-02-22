@@ -13,7 +13,7 @@ export const OrderGoods = ({item}) => {
           <span className="currency">₽</span>
         </p>
       </div>
-      <Count count={1} />
+      <Count value={1} />
     </li>
   );
 };

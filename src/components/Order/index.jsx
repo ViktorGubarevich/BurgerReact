@@ -13,7 +13,7 @@ export const Order = () => {
         </div>
         <div className={style.wrap_list}>
           <ul className={style.list}>
-            {ORDER_LIST && ORDER_LIST.map(item => <OrderGoods item={item} />)}
+            {ORDER_LIST && ORDER_LIST.map((item, i) => <OrderGoods key={i} item={item} />)}
           </ul>
           <div className={style.total}>
             <p>Итого</p>
