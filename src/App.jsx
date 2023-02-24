@@ -4,6 +4,7 @@ import { Navigation } from "./components/Navigation";
 import { Catalog } from "./components/Catalog";
 import { Footer } from "./components/Footer";
 import { store } from "./store";
+import { ModalDelivery } from "./components/ModalDelivery";
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
         <Catalog />
       </main>
       <Footer />
+      <ModalDelivery />
     </Provider>
   );
 };
