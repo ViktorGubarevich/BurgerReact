@@ -9,7 +9,7 @@ import style from "./Catalog.module.css";
 
 export const Catalog = () => {
   const { category, activeCategory } = useSelector((state) => state.category);
-  const { products } = useSelector((state) => state.product);
+  const { products, flagProduct } = useSelector((state) => state.product);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,19 +24,21 @@ export const Catalog = () => {
         <Order />
         <div className={style.wrapper}>
           <h2 className={style.title}>{category[activeCategory]?.rus}</h2>
-          <div className={style.wrap_list}>
-            {products.length ? (
-              <ul className={style.list}>
-                {products.map((item) => (
-                  <li key={item.id} className={style.item}>
-                    <CatalogProduct item={item} />
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className={style.empty}>К сожалению товаров данной категории нет!</p>
-            )}
-          </div>
+          {products.length ? (
+            <ul className={style.list}>
+              {products.map((item) => (
+                <li key={item.id} className={style.item}>
+                  <CatalogProduct item={item} />
+                </li>
+              ))}
+            </ul>
+          ) : (
+            flagProduct && (
+              <p className={style.empty}>
+                К сожалению товаров данной категории нет!
+              </p>
+            )
+          )}
         </div>
       </Container>
     </section>
