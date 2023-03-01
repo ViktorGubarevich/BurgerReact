@@ -3,13 +3,13 @@
   background-color: #ffffff;
 }
 
-.footer__logo {
+.logo {
   width: 196px;
   color: #ff7020;
   margin-bottom: 24px;
 }
 
-.footer__address {
+.address {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -17,14 +17,14 @@
   font-style: normal;
 }
 
-.footer__title {
+.title {
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
   margin-bottom: 8px;
 }
 
-.footer__phone {
+.phone {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -33,23 +33,23 @@
   line-height: 130%;
 }
 
-.footer__list {
+.list {
   display: flex;
   gap: 16px;
 }
 
-.footer__sn {
+.sn {
   color: #ff7020;
 }
 
-.footer__phone:hover,
-.footer__phone:focus,
-.footer__sn:hover,
-.footer__sn:focus {
+.phone:hover,
+.phone:focus,
+.sn:hover,
+.sn:focus {
   color: #ffab08;
 }
 
-.footer__development {
+.development {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -59,22 +59,22 @@
 }
 
 @media (min-width: 480px) {
-  .footer__logo {
+  .logo {
     margin-bottom: 36px;
   }
 
-  .footer__address {
+  .address {
     flex-direction: row;
     margin-bottom: 40px;
   }
 
-  .footer__contact {
+  .contact {
     flex-grow: 1;
   }
 }
 
 @media (min-width: 1024px) {
-  .footer__content {
+  .content {
     display: grid;
     grid-template-areas:
       'logo address'
@@ -82,52 +82,52 @@
     gap: 35px;
   }
 
-  .footer__logo {
+  .logo {
     width: 300px;
     margin-bottom: 0;
     grid-area: logo;
   }
 
-  .footer__address {
+  .address {
     margin-bottom: 0;
     grid-area: address;
     gap: 50px;
     justify-content: flex-end;
   }
 
-  .footer__contact {
+  .contact {
     flex-grow: unset;
   }
 
-  .footer__development {
+  .development {
     grid-area: development;
   }
 
-  .footer__title {
+  .title {
     margin-bottom: 24px;
     font-size: 24px;
   }
 
-  .footer__title_sn {
+  .title_sn {
     margin-bottom: 22px;
   }
 
-  .footer__phone {
+  .phone {
     font-size: 16px;
   }
 }
 
 @media (min-width: 1360px) {
-  .footer__content {
+  .content {
     grid-template-columns: 1fr 1fr;
     gap: 35px 30px;
   }
 
-  .footer__address {
+  .address {
     justify-content: flex-start;
   }
 
-  .footer__contact {
+  .contact {
     flex-grow: 1;
   }
 }
